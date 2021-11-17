@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on example.com
+From: webmaster@localhost
+To: kartiktakyar6@gmail.com
+Date: Sat, 13 Nov 2021 17:51:12 -0000
+Message-ID: <163682587201.19976.6966489372963114264@LAPTOP-DJCAN1D5>
+
+
+You're receiving this email because you requested a password reset for your user account at example.com.
+
+Please go to the following page and choose a new password:
+
+http://example.com/user/%5Ereset/(%3FPNg%5B0-9A-Za-z_%5C-%5D+)/(%3FPaw2rjc-eb8ef50d9d0d2af4c70ac2612a12b8fb%5B0-9A-Za-z%5D%7B1,13%7D-%5B0-9A-Za-z%5D%7B1,20%7D)/$
+
+Your username, in case you’ve forgotten: Kartik46
+
+Thanks for using our site!
+
+The example.com team
+
+
+
+-------------------------------------------------------------------------------
