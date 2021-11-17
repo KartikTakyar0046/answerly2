@@ -155,7 +155,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]
-MEDIA_ROOT=os.path.join(BASE_DIR,'images')
+STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]
+MEDIA_ROOT=os.path.join(BASE_DIR,'static/images')
+STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
 ALLOWED_HOSTS = ['127.0.0.1', 'https://answerlyquora.herokuapp.com/']
 
