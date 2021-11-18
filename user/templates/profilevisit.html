@@ -14,7 +14,6 @@ background-color: #3e3b3f ;
 <body>
 	<div class="col-md-3">
 		<div class="card card-body">
-				<img class="profile-pic" src="{{user_visit.profile.profile_pic.url}}" />
 				<br>
 				You are viewing Profile of<a href="{% url 'profile-visit' user_visit.username %}">{{user_visit.username}}</a>
 {%if is_follow%}
