@@ -21,10 +21,9 @@ def homepage(request):
 
 def all_user(request):
     logged_user=request.user
-    profile_users=Profile.objects.all()
     notifications=Notification.objects.filter(user=request.user)
     users=User.objects.all()
-    context={'profile_users':profile_users,'notifications': notifications}
+    context={'users':users,'notifications': notifications}
     return render(request,'all_users.html',context)
 def follow(request, username):
 
