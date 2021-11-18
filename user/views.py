@@ -61,8 +61,8 @@ def logoutUser(request):
 @login_required
 def account_settings(request):
     logged_in_user=request.user
+    profile_user=Profile.objects.get(user=logged_in_user)
     following=Follow.objects.filter(following=logged_in_user)
-
     followers=Follow.objects.filter(follower=logged_in_user)
     form=AccountSettings(instance=profile_user)
     questions=Question.objects.filter(author=logged_in_user)
