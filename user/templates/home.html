@@ -32,6 +32,10 @@ background-color:  #3e3b3f   ;
 a:active {
   color: white;
 }
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
 </style>
 <body>
 <div class="row">
@@ -41,7 +45,7 @@ a:active {
   <div class="card-body" >
     <div class="w3-container">
        <a href="{% url 'question-detail' ques.slug %}">
-        <img  src="{{ques.ques_image.url}}"width="600" height="500"style="margin:10px;"/>
+        <img  src="{{ques.ques_image.url}}" class="responsive" width="600" height="500"style="margin:10px;" />
       </div>
     <h5 class="card-title" style="margin-left: 30px;"> <h3 class="flow-text" style="margin-left:30px;">{{ques.body|safe}}</h3></a></h5>
     {% if ques.author.username == user.username%}
