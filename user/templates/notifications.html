@@ -63,7 +63,7 @@ color:white;
     <div class="card horizontal">
       <div class="card-stacked">
         <div class="card-content">
-            <p><strong>{{noti.senderr}}</strong> just added an answer to your question <strong><a href="{% url 'question-detail' noti.answer.question.slug %}">{{noti.answer.question}}</a></strong></p>
+            <p><strong>{{noti.senderr}}</strong> just added an answer to your question <strong><a href="{% url 'question-detail' noti.answer.question.slug %}">{{noti.answer.question|safe}}</a></strong></p>
         <br>
             <p><h5>Ans:- </h5>{{noti.answer|safe}}</p>
 
