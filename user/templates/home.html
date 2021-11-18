@@ -45,7 +45,7 @@ a:active {
       </div>
     <h5 class="card-title" style="margin-left: 30px;"> <h3 class="flow-text" style="margin-left:30px;">{{ques.body|safe}}</h3></a></h5>
     {% if ques.author.username == user.username%}
-      <p style="margin-left:30px;">By:- <a href="{%url 'profile-visit' ques.author.username%}"> {{ques.author}}</a> <button type="button" onclick="location.href='{% url 'delete_post' ques.id %}'" class="btn btn-danger" style="margin-left:500px;">Delete</button></p>
+      <p style="margin-left:30px;">By:- {{ques.author}}<button type="button" onclick="location.href='{% url 'delete_post' ques.id %}'" class="btn btn-danger" style="margin-left:500px;">Delete</button></p>
       {% else %}
       <p style="margin-left:30px;">By:-{{ques.author}}</p>
     {%endif%}
