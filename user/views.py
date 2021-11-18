@@ -61,20 +61,7 @@ def logoutUser(request):
 
 
 
-def profilevisit(request,username):
-    logged_user=request.user
-    user_visit=User.objects.get(username=username)
-    if logged_user==user_visit:
-        return redirect('profile')
-    try:
-        test = Follow.objects.get(follower=user_visit,following=logged_user)
-    except Follow.DoesNotExist:
-        test = None
-    is_follow=False
-    if test is not None:
-        is_follow=True
-    context={'user_visit':user_visit,'is_follow':is_follow}
-    return render(request,'profilevisit.html',context)
+
 
 
 def following(request):
