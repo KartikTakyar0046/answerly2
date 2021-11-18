@@ -11,11 +11,6 @@ class Profile(models.Model):
     profile_pic = models.ImageField(default="defaultt.png", null=True, blank=True)
     def __str__(self):
     	return f'{self.user.username}'
-def create_profile(sender,instance,created,**kwargs):
-    if created:
-        Profile.objects.create(user=instance)
-
-post_save.connect(create_profile,sender=User)
 class Follow(models.Model):
     following = models.ForeignKey(User, related_name="who_follows",on_delete=models.CASCADE)
     follower = models.ForeignKey(User, related_name="who_is_followed",on_delete=models.CASCADE)
