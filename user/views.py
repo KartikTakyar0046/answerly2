@@ -60,7 +60,6 @@ def logoutUser(request):
     return redirect('login')
 @login_required
 def account_settings(request):
-    profile_user=request.user.profile
     logged_in_user=request.user
     following=Follow.objects.filter(following=logged_in_user)
 
@@ -77,9 +76,7 @@ def account_settings(request):
 
 def profilevisit(request,username):
     logged_user=request.user
-    logged_profile=logged_user.profile
     user_visit=User.objects.get(username=username)
-    profile_user=user_visit.profile
     if logged_user==user_visit:
         return redirect('profile')
     try:
@@ -89,7 +86,7 @@ def profilevisit(request,username):
     is_follow=False
     if test is not None:
         is_follow=True
-    context={'user_visit':user_visit,'profile_user':profile_user,'is_follow':is_follow}
+    context={'user_visit':user_visit,'is_follow':is_follow}
     return render(request,'profilevisit.html',context)
 
 
