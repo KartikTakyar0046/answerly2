@@ -16,12 +16,12 @@ background-color:#222;
 
 </style>
 <body>
-    {%for user in users%}
+    {%for user in profile_users%}
     <div class="card card-body">
     <li class="collection-item avatar">
         <div class="w3-container">
             <img  class="profile-pic" src="{{profile_users.profile_pic.url}}" alt="Image Not Supported">
-            <span class="title"><a href="{% url 'profile-visit' user.username%}" >{{user.username}}</a></span>
+            <span class="title"><a href="{% url 'profile-visit' profile_user.user.username%}" >{{profile_user.name}}</a></span>
         </div>
     </li>
         <br>
