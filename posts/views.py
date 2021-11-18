@@ -24,7 +24,7 @@ def all_user(request):
     profile_users=Profile.objects.all()
     notifications=Notification.objects.filter(user=request.user)
     users=User.objects.all()
-    context={'users':users,'notifications': notifications}
+    context={'profile_users':profile_users,'notifications': notifications}
     return render(request,'all_users.html',context)
 def follow(request, username):
 

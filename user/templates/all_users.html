@@ -20,7 +20,7 @@ background-color:#222;
     <div class="card card-body">
     <li class="collection-item avatar">
         <div class="w3-container">
-            <img  class="profile-pic" src="{{user.profile.profile_pic.url}}" alt="Image Not Supported">
+            <img  class="profile-pic" src="{{profile_users.profile_pic.url}}" alt="Image Not Supported">
             <span class="title"><a href="{% url 'profile-visit' user.username%}" >{{user.username}}</a></span>
         </div>
     </li>
