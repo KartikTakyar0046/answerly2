@@ -58,20 +58,7 @@ def loginPage(request):
 def logoutUser(request):
     logout(request)
     return redirect('login')
-@login_required
-def account_settings(request):
-    logged_in_user=request.user
-    profile_user=Profile.objects.get(user=logged_in_user)
-    following=Follow.objects.filter(following=logged_in_user)
-    followers=Follow.objects.filter(follower=logged_in_user)
-    form=AccountSettings(instance=profile_user)
-    questions=Question.objects.filter(author=logged_in_user)
-    if request.method == 'POST':
-        form = AccountSettings(request.POST,request.FILES,instance=profile_user)
-        if form.is_valid():
-            form.save()
-    context={'form':form,'logged_in_user':logged_in_user,'following':following,'followers':followers,'questions':questions}
-    return render(request,'profile.html',context)
+
 
 
 def profilevisit(request,username):
