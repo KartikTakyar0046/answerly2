@@ -30,7 +30,6 @@ urlpatterns = [
     path('password_reset_complete/', auth_views.PasswordResetCompleteView.as_view(template_name='password_reset_done.html'), name="password_reset_complete"),
     path('login/', views.loginPage, name="login"),
     path('logout/', views.logoutUser, name="logout"),
-    path('profile/', views.account_settings,name="profile"),
     path('profilevisit/<str:username>/', views.profilevisit, name="profile-visit"),
     path('following/',views.following,name="following"),
 
